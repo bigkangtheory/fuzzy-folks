@@ -10,4 +10,9 @@ class Employee extends Model
     {
     	return static::where('is_current', true)->get();
     }
+
+    public function department()
+    {
+      return $this->belongsTo(Department::class);
+    }
 }

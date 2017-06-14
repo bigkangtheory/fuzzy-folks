@@ -24,4 +24,5 @@ class EmployeeController extends Controller
 
   	return view('employees.person', compact('id'));
 	}
+
 }

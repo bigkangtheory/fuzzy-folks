@@ -12,21 +12,59 @@ class EmployeeSeeder extends Seeder
 	 */
 	public function run()
 	{
+
 		$employees = [
 			[
 				'name'       => 'Sam',
-				'department' => 'iOS',
+				'department_id' => 1,
 				'is_current' => true,
 			],
 
 			[
 				'name'       => 'Kelvin',
-				'department' => 'devOps',
+				'department_id' => 2,
 				'is_current' => true,
 			],
+
 			[
 				'name'       => 'Walter',
-				'department' => 'Android',
+				'department_id' => 1,
+				'is_current' => true,
+			],
+
+			[
+				'name'       => 'AJ',
+				'department_id' => 2,
+				'is_current' => true,
+			],
+
+			[
+				'name'       => 'Noah',
+				'department_id' => 2,
+				'is_current' => true,
+			],
+
+			[
+				'name'       => 'JorEl',
+				'department_id' => 2,
+				'is_current' => true,
+			],
+
+			[
+				'name'       => 'Anthony',
+				'department_id' => 3,
+				'is_current' => true,
+			],
+
+			[
+				'name'       => 'Peter',
+				'department_id' => 3,
+				'is_current' => true,
+			],
+
+			[
+				'name'       => 'Cesar',
+				'department_id' => 3,
 				'is_current' => true,
 			],
 
@@ -38,6 +76,7 @@ class EmployeeSeeder extends Seeder
 			$employee_instance = new Employee();
 
 			foreach ($employee as $key => $value) {
+				//employee -> dept == "" .find() where === "Web"
 				$employee_instance->{$key} = $value;
 			}
 			$employee_instance->save();
@@ -52,4 +91,3 @@ class EmployeeSeeder extends Seeder
 		//		$employee->save();
 	}
 }
-

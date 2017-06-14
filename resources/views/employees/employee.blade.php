@@ -6,9 +6,11 @@
 </head>
 
 <body>
+  <a href="#">Ascending</a>
+  <a href="#">Descending</a>
       <ul>
       @foreach ($employees as $employee)
-      	<a href="/employee/{{ $employee->id }}">
+      	<a href="/fuzzyfolks/employee/{{ $employee->id }}">
         	<li>{{ $employee->name }}</li>
         </a>
       @endforeach
