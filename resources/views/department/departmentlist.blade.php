@@ -6,5 +6,10 @@
   </head>
   <body>
     hello from departments list page
+    <ul>
+      @foreach ($departments as $department)
+      <li>{{ $department->name }}</li>
+      @endforeach
+    </ul>
   </body>
 </html>

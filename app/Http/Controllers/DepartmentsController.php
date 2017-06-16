@@ -11,7 +11,9 @@ class DepartmentsController extends Controller
     public function index()
     {
       $departments = Department::get();
-      return view('department.departmentlist', compact('departments'));
+      //front end
+      //return view('department.departmentlist', compact('departments'));
+      return new JsonResponse($departments, 200);
     }
 
     // public function find()
