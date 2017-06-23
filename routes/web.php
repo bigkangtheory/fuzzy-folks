@@ -11,9 +11,10 @@ Route::get('/fuzzyfolks/department/', 'DepartmentsController@index');
 
 Route::get('/fuzzyfolks/departments/{deptid}/employees', 'DepartmentsController@getDepartmentEmployees');
 
-Route::get('/', 'PostsController@index');
-// Controller = PostsController
-// Eloquent model => Post
-// migration => create_posts_table
+Route::get('/posts', 'PostsController@index');
+
+Route::get('/posts/create', 'PostsController@create');
+
+Route::post('/posts', 'PostsController@store');
 
 Route::get('/posts/{post}', 'PostsController@show');
